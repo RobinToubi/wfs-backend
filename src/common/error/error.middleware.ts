@@ -20,6 +20,7 @@ const getStatusCode = (error: IAppError): number => {
     case ErrorType.missingToken:
     case ErrorType.invalidToken:
       return 401;
+    case ErrorType.uniqueConstraint:
     case ErrorType.missingRole:
       return 403;
     case ErrorType.unhandledError:
@@ -30,6 +31,8 @@ const getStatusCode = (error: IAppError): number => {
 
 const getMessage = (error: IAppError): string => {
   switch (error?.type) {
+    case ErrorType.uniqueConstraint:
+      return 'Resource already exists';
     case ErrorType.resourceIdFormat:
       return 'Resource id must be an integer';
     case ErrorType.resourceIdNotFound:

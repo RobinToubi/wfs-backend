@@ -33,3 +33,11 @@ npm install --save-dev @types/express
 ```
 npm install
 ```
+
+# Connection
+
+Admin accesses
+
+username: admin
+mail : admin@admin.com
+pwd : admin

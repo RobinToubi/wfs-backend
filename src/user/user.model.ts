@@ -27,9 +27,14 @@ const UserSchema = new Schema<UserDocument, UserModel>({
     required: true,
     lowercase: true
   },
+  birthDate: {
+    type: Number,
+    required: true,
+  },
   email: {
     type: String,
-    required: true
+    required: true,
+    unique: true,
   },
   password: {
     type: String,
@@ -69,18 +74,16 @@ interface UserBaseDocument extends IUser, Document {
 }
 
 // Export this for strong typing
-export interface UserDocument extends UserBaseDocument {
-  test: string;
-}
+export interface UserDocument extends UserBaseDocument {}
 
 // For model
-export interface UserModel extends Model<UserDocument>, IUser {
-}
+export interface UserModel extends Model<UserDocument>, IUser {}
 
 UserSchema.pre<UserDocument>("save", function(next) {
   if (this.isModified("password")) {
     hash(this.password, 10).then((hashedPassword) => {
       this.password = hashedPassword;
+      next();
     })
   }
 });

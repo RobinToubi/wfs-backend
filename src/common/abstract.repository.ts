@@ -1,5 +1,3 @@
-import { Document, Schema } from 'mongoose';
-import { Model } from 'mongoose';
 import { PrimaryKeyError } from './error/repository-error.model';
 
 export abstract class AbstractRepository<M> {
@@ -10,15 +8,15 @@ export abstract class AbstractRepository<M> {
   }
 
   get(id: number): Promise<M> {
-    return this.modelClass.findById(id, { rejectOnEmpty: true }) as unknown as Promise<M>;
+    return this.modelClass.findById(id, { rejectOnEmpty: true });
   }
 
   create(model: M): Promise<M> {
-    return this.modelClass.create(model) as unknown as Promise<M>;
+    return this.modelClass.create(model);
   }
 
   update(id: number, model: M): Promise<M> {
-    return this.modelClass.findByIdAndUpdate(id, model) as unknown as Promise<M>;
+    return this.modelClass.findByIdAndUpdate(id, model);
   }
 
   remove(id: number): Promise<void> {

@@ -9,4 +9,7 @@ authRouter.post('/login',
 
 authRouter.get('/me',
   authenticationMiddleware,
-  (req: AuthenticatedRequest, res: Response, next: NextFunction) => authController.me(req, res, next))
+  (req: AuthenticatedRequest, res: Response, next: NextFunction) => authController.me(req, res, next));
+
+authRouter.post('/register', 
+  (req: Request, res: Response, next: NextFunction) => authController.register(req, res, next));

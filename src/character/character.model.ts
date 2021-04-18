@@ -15,34 +15,31 @@ const CharacterSchema = new Schema<CharacterDocument, CharacterModel>({
     required: true
   },
   lastName: String,
-  username: {
+  nickname: {
     type: String,
     unique: true,
     required: true,
     lowercase: true
   },
-  password: {
-    type: String,
-    required: true
+  birthYear: {
+    type: Number,
+    default: new Date().getFullYear()
   },
   gender: {
     type: String,
     enum: Gender,
-    default: Gender.HelicoptereDeCombat,
-    required: true
+    default: Gender.HelicoptereDeCombat
   }
 })
-
 
 export interface ICharacter extends IModel {
   firstName: string;
   lastName: string;
-  birthDate: Date;
+  birthYear: Date;
   nationality: string;
   gender: Gender;
+  nickname: string;
 }
-
-
 
 interface CharacterBaseDocument extends ICharacter, Document {
   id: number;

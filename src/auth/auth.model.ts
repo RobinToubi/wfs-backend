@@ -2,8 +2,8 @@ import { IDto } from '../common/abstract.model';
 import { UserRole } from '../user/user.model';
 
 export interface IAuthCredentials {
-  login: string;
-  pwd: string;
+  email: string;
+  password: string;
 }
 
 export interface IAuthToken {

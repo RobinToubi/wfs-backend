@@ -6,7 +6,8 @@ export enum ErrorType {
   invalidCredentials = 'INVALID_CREDENTIALS',
   missingToken = 'MISSING_TOKEN',
   invalidToken = 'INVALID_TOKEN',
-  missingRole = 'MISSING_ROLE'
+  missingRole = 'MISSING_ROLE',
+  uniqueConstraint = 11000
 }
 
 export interface IAppError {

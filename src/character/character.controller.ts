@@ -1,7 +1,7 @@
-import { NextFunction, Request, Response } from 'express';
+import { NextFunction, Response } from 'express';
 import { AbstractController } from '../common/abstract.controller';
 import { AuthenticatedRequest } from '../common/authentication.middleware';
-import { CharacterModel, ICharacter } from './character.model';
+import { CharacterModel } from './character.model';
 import { characterService } from './character.service';
 
 class CharacterController extends AbstractController<CharacterModel> {

@@ -1,5 +1,5 @@
 import { AbstractService } from '../common/abstract.service';
-import { CharacterModel, ICharacter } from './character.model';
+import { CharacterModel } from './character.model';
 import { characterRepository } from './character.repository';
 
 class CharacterService extends AbstractService<CharacterModel> {

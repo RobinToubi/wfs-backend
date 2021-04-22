@@ -35,7 +35,7 @@ export abstract class AbstractController<M> {
   }
 
   remove(request: Request, response: Response, next: NextFunction): void {
-    const id = parseInt(request.params.id);
+    const id = request.params.id;
     this.service.remove(id)
       .then(() => {
         response.status(204);

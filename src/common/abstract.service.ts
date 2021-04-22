@@ -20,7 +20,7 @@ export abstract class AbstractService<M> {
     return this.repository.update(id, data);
   }
 
-  remove(id: number): Promise<void> {
+  remove(id: string): Promise<void> {
     return this.repository.remove(id);
   }
 } 

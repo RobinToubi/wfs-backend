@@ -19,7 +19,7 @@ export abstract class AbstractRepository<M> {
     return this.modelClass.findByIdAndUpdate(id, model);
   }
 
-  remove(id: number): Promise<void> {
+  remove(id: string): Promise<void> {
     return this.modelClass.findByIdAndRemove(id)
       .then((affectedRowsCount) => {
         if (!affectedRowsCount) {

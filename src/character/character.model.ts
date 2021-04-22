@@ -14,12 +14,16 @@ const CharacterSchema = new Schema<CharacterDocument, CharacterModel>({
     type: String,
     required: true
   },
-  lastName: String,
+  lastName: {
+    type: String
+  },
   nickname: {
     type: String,
     unique: true,
-    required: true,
     lowercase: true
+  },
+  nationality: {
+    type: String,
   },
   birthYear: {
     type: Number,

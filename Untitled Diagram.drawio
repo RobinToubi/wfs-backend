@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" modified="2021-04-22T12:13:22.761Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36" etag="op-OHyveJfMg716VPNvZ" version="14.6.5" type="github">
+  <diagram id="oX1b_3EM2NHa71FthVO_" name="Page-1">
+    <mxGraphModel dx="937" dy="650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DAx7MIlhXy9xXeXg1lcq-1" value="User" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="140" y="110" width="160" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="DAx7MIlhXy9xXeXg1lcq-2" value="+_id&#xa;+firstname&#xa;+lastname&#xa;+birthyear&#xa;+username&#xa;+email&#xa;+password&#xa;+gender&#xa;+role" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="DAx7MIlhXy9xXeXg1lcq-1">
+          <mxGeometry y="30" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="DAx7MIlhXy9xXeXg1lcq-4" value="Character" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="360" y="110" width="160" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="DAx7MIlhXy9xXeXg1lcq-5" value="+firstname&#xa;+lastname&#xa;+birthYear&#xa;+nickname&#xa;+gender&#xa;+species&#xa;+actors" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="DAx7MIlhXy9xXeXg1lcq-4">
+          <mxGeometry y="30" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="DAx7MIlhXy9xXeXg1lcq-6" value="Movie" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="140" y="340" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="DAx7MIlhXy9xXeXg1lcq-7" value="+name&#xa;+dateSortie&#xa;+characters&#xa;+genre&#xa;+duration&#xa;+affiche&#xa;+preview&#xa;+realisator" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="DAx7MIlhXy9xXeXg1lcq-6">
+          <mxGeometry y="30" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DAx7MIlhXy9xXeXg1lcq-8" value="Actor" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="360" y="340" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="DAx7MIlhXy9xXeXg1lcq-9" value="+firstname&#xa;+lastname&#xa;+birthdate&#xa;+nationality&#xa;+gender&#xa;+nickname" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="DAx7MIlhXy9xXeXg1lcq-8">
+          <mxGeometry y="30" width="160" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

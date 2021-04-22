@@ -10,17 +10,9 @@ enum Gender {
 
 // Schema
 const CharacterSchema = new Schema<CharacterDocument, CharacterModel>({
-  firstName: {
-    type: String,
-    required: true
-  },
+  firstName: String,
   lastName: String,
-  nickname: {
-    type: String,
-    unique: true,
-    required: true,
-    lowercase: true
-  },
+  nickname: String,
   birthYear: {
     type: Number,
     default: new Date().getFullYear()

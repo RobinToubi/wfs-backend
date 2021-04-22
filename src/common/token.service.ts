@@ -4,7 +4,7 @@ import { UserRole } from '../user/user.model';
 const secretKey = 'abcdef';
 
 export interface ITokenPayload {
-  id: number;
+  id: string;
   email: string;
   role: UserRole;
 }

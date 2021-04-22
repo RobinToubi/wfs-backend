@@ -28,7 +28,7 @@ class AuthService {
     return userRepository.create(user);
   }
 
-  getUser(userId: number): Promise<IAuthMeDto> {
+  getUser(userId: string): Promise<IAuthMeDto> {
     return userRepository.get(userId);
   }
 }

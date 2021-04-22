@@ -13,9 +13,7 @@ const CharacterSchema = new Schema<CharacterDocument, CharacterModel>({
   firstName: String,
   lastName: String,
   nickname: String,
-  nationality: {
-    type: String,
-  },
+  nationality: String,
   birthYear: {
     type: Number,
     default: new Date().getFullYear()
@@ -30,10 +28,10 @@ const CharacterSchema = new Schema<CharacterDocument, CharacterModel>({
 export interface ICharacter extends IModel {
   firstName: string;
   lastName: string;
-  birthYear: number;
-  nationality: string;
-  gender: Gender;
   nickname: string;
+  nationality: string;
+  birthYear: number;
+  gender: Gender;
 }
 
 interface CharacterBaseDocument extends ICharacter, Document {

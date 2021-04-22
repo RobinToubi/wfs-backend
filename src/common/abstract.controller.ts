@@ -12,8 +12,7 @@ export abstract class AbstractController<M> {
   }
 
   get(request: Request, response: Response, next: NextFunction): void {
-    const id = parseInt(request.params.id);
-    this.service.get(id)
+    this.service.get(request.params.id)
       .then(dto => response.json(dto))
       .catch(next);
   }
@@ -28,15 +27,13 @@ export abstract class AbstractController<M> {
   }
 
   update(request: Request, response: Response, next: NextFunction): void {
-    const id = parseInt(request.params.id);
-    this.service.update(id, request.body)
+    this.service.update(request.params.id, request.body)
       .then(item => response.json(item))
       .catch(next);
   }
 
   remove(request: Request, response: Response, next: NextFunction): void {
-    const id = request.params.id;
-    this.service.remove(id)
+    this.service.remove(request.params.id)
       .then(() => {
         response.status(204);
         response.json();

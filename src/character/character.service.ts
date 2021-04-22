@@ -5,7 +5,7 @@ import { characterRepository } from './character.repository';
 class CharacterService extends AbstractService<CharacterModel> {
   protected repository = characterRepository;
 
-  findAllFavorites(userId: number): Promise<CharacterModel[]> {
+  findAllFavorites(userId: string): Promise<CharacterModel[]> {
     return this.repository.findAllFavorites(userId);
   }
 }

@@ -10,17 +10,10 @@ enum Gender {
 
 // Schema
 const CharacterSchema = new Schema<CharacterDocument, CharacterModel>({
-  firstName: {
-    type: String,
-    required: true
-  },
+  firstName: String,
   lastName: String,
-  nickname: {
-    type: String,
-    unique: true,
-    required: true,
-    lowercase: true
-  },
+  nickname: String,
+  nationality: String,
   birthYear: {
     type: Number,
     default: new Date().getFullYear()
@@ -35,14 +28,14 @@ const CharacterSchema = new Schema<CharacterDocument, CharacterModel>({
 export interface ICharacter extends IModel {
   firstName: string;
   lastName: string;
-  birthYear: Date;
-  nationality: string;
-  gender: Gender;
   nickname: string;
+  nationality: string;
+  birthYear: number;
+  gender: Gender;
 }
 
 interface CharacterBaseDocument extends ICharacter, Document {
-  id: number;
+  id: string;
   fullname: string;
   getGender(): string;
 }

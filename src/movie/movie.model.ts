@@ -3,23 +3,23 @@ import { IModel } from '../common/abstract.model';
 
 // Schema
 const MovieSchema = new Schema<MovieDocument, MovieModel>({
-  firstName: {
+  title: {
     type: String,
     required: true
   },
-  date: Date,
+  year: Date,
 })
 
 
 export interface IMovie extends IModel {
   title: string;
-  date: Date;
+  year: Date;
 }
 
 
 
 interface MovieBaseDocument extends IMovie, Document {
-  id: number;
+  id: string;
 }
 
 // Export this for strong typing

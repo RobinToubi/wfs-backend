@@ -1,7 +1,7 @@
 export interface IModel {
-  id?: number;
+  id?: string;
 }
 
 export interface IDto {
-  id?: number;
+  id?: string;
 }

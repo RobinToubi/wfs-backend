@@ -7,7 +7,7 @@ export abstract class AbstractRepository<M> {
     return this.modelClass.find();
   }
 
-  get(id: number): Promise<M> {
+  get(id: string): Promise<M> {
     return this.modelClass.findById(id, { rejectOnEmpty: true });
   }
 
@@ -15,11 +15,11 @@ export abstract class AbstractRepository<M> {
     return this.modelClass.create(model);
   }
 
-  update(id: number, model: M): Promise<M> {
+  update(id: string, model: M): Promise<M> {
     return this.modelClass.findByIdAndUpdate(id, model);
   }
 
-  remove(id: number): Promise<void> {
+  remove(id: string): Promise<void> {
     return this.modelClass.findByIdAndRemove(id)
       .then((affectedRowsCount) => {
         if (!affectedRowsCount) {

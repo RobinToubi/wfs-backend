@@ -16,20 +16,15 @@ export enum UserRole {
 
 // Schema
 const UserSchema = new Schema<UserDocument, UserModel>({
-  firstName: {
-    type: String,
-    required: true
-  },
+  firstName: String,
   lastName: String,
   username: {
     type: String,
     unique: true,
-    required: true,
     lowercase: true
   },
   birthDate: {
-    type: Number,
-    required: true,
+    type: Number
   },
   email: {
     type: String,
@@ -44,7 +39,6 @@ const UserSchema = new Schema<UserDocument, UserModel>({
     type: String,
     enum: Gender,
     default: Gender.HelicoptereDeCombat,
-    required: true
   },
   role: {
     type: String,
@@ -68,7 +62,7 @@ export interface IUser extends IModel {
 
 
 interface UserBaseDocument extends IUser, Document {
-  id: number;
+  id: string;
   fullname: string;
   getGender(): string;
 }

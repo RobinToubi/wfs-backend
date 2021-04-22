@@ -5,7 +5,7 @@ import { movieRepository } from './movie.repository';
 class MovieService extends AbstractService<MovieModel> {
   protected repository = movieRepository;
 
-  findAllFavorites(userId: number): Promise<MovieModel[]> {
+  findAllFavorites(userId: string): Promise<MovieModel[]> {
     return this.repository.findAllFavorites(userId);
   }
 }

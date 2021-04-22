@@ -12,7 +12,7 @@ export abstract class AbstractController<M> {
   }
 
   get(request: Request, response: Response, next: NextFunction): void {
-    const id = parseInt(request.params.id);
+    const id = request.params.id;
     this.service.get(id)
       .then(dto => response.json(dto))
       .catch(next);
@@ -28,7 +28,7 @@ export abstract class AbstractController<M> {
   }
 
   update(request: Request, response: Response, next: NextFunction): void {
-    const id = parseInt(request.params.id);
+    const id = request.params.id;
     this.service.update(id, request.body)
       .then(item => response.json(item))
       .catch(next);

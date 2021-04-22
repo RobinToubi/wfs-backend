@@ -8,7 +8,7 @@ export abstract class AbstractService<M> {
     return this.repository.findAll();
   }
 
-  get(id: number): Promise<M> {
+  get(id: string): Promise<M> {
     return this.repository.get(id);
   }
 
@@ -16,7 +16,7 @@ export abstract class AbstractService<M> {
     return this.repository.create(data);
   }
 
-  update(id: number, data: M): Promise<M> {
+  update(id: string, data: M): Promise<M> {
     return this.repository.update(id, data);
   }
 

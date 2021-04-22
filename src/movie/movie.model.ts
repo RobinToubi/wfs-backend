@@ -19,7 +19,7 @@ export interface IMovie extends IModel {
 
 
 interface MovieBaseDocument extends IMovie, Document {
-  id: number;
+  id: string;
 }
 
 // Export this for strong typing

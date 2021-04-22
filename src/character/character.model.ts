@@ -13,6 +13,9 @@ const CharacterSchema = new Schema<CharacterDocument, CharacterModel>({
   firstName: String,
   lastName: String,
   nickname: String,
+  nationality: {
+    type: String,
+  },
   birthYear: {
     type: Number,
     default: new Date().getFullYear()

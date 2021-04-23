@@ -8,12 +8,24 @@ const MovieSchema = new Schema<MovieDocument, MovieModel>({
     required: true
   },
   year: Date,
+  characters: [],
+  genre: String,
+  duration: Number,
+  affiche: String,
+  preview: String,
+  realisator: String,
 })
 
 
 export interface IMovie extends IModel {
   title: string;
   year: Date;
+  characters: [];
+  genre: string;
+  duration: number;
+  affiche: string;
+  preview: string;
+  realisator: string;
 }
 
 

@@ -8,7 +8,11 @@ export abstract class AbstractRepository<M> {
   }
 
   get(id: string): Promise<M> {
-    return this.modelClass.findById(id, { rejectOnEmpty: true });
+    return this.modelClass.findOne({ _id: id }).then((res) => {
+      if (!res) {
+        throw new PrimaryKeyError();
+      }else return res;
+    });
   }
 
   create(model: M): Promise<M> {

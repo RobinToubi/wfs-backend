@@ -7,7 +7,7 @@ const MovieSchema = new Schema<MovieDocument, MovieModel>({
     type: String,
     required: true
   },
-  year: Date,
+  year: Number,
   characters: [],
   genre: String,
   duration: Number,
@@ -19,7 +19,7 @@ const MovieSchema = new Schema<MovieDocument, MovieModel>({
 
 export interface IMovie extends IModel {
   title: string;
-  year: Date;
+  year: number;
   characters: [];
   genre: string;
   duration: number;

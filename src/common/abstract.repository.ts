@@ -8,7 +8,7 @@ export abstract class AbstractRepository<M> {
   }
 
   get(id: string): Promise<M> {
-    return this.modelClass.findById(id, { rejectOnEmpty: true });
+    return this.modelClass.findById(id);
   }
 
   create(model: M): Promise<M> {

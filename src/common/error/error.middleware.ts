@@ -11,9 +11,6 @@ export const errorMiddleware = (error: IAppError, request: Request, response: Re
 
 const getStatusCode = (error: IAppError): number => {
   switch (error?.type) {
-    case ErrorType.resourceIdFormat:
-      return 400;
-    case ErrorType.resourceIdNotFound:
     case ErrorType.resourceTypeNotFound:
       return 404;
     case ErrorType.invalidCredentials:
@@ -33,10 +30,6 @@ const getMessage = (error: IAppError): string => {
   switch (error?.type) {
     case ErrorType.uniqueConstraint:
       return 'Resource already exists';
-    case ErrorType.resourceIdFormat:
-      return 'Resource id must be an integer';
-    case ErrorType.resourceIdNotFound:
-      return `Resource with id=${error.messageParam} does not exist`;
     case ErrorType.resourceTypeNotFound:
       return `Resource type ${error.messageParam} does not exist`;
     case ErrorType.invalidCredentials:

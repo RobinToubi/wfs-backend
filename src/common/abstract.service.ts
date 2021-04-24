@@ -1,4 +1,3 @@
-import { Document, Model } from 'mongoose';
 import { AbstractRepository } from './abstract.repository';
 
 export abstract class AbstractService<M> {

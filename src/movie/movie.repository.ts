@@ -1,5 +1,5 @@
 import { AbstractRepository } from '../common/abstract.repository';
-import { MovieDocument, MovieModel, movieModel, IMovie } from './movie.model';
+import { MovieModel, movieModel} from './movie.model';
 
 class MovieRepository extends AbstractRepository<MovieModel> {
   protected modelClass = movieModel;

@@ -1,5 +1,5 @@
 import { AbstractService } from '../common/abstract.service';
-import { MovieModel, IMovie } from './movie.model';
+import { MovieModel} from './movie.model';
 import { movieRepository } from './movie.repository';
 
 class MovieService extends AbstractService<MovieModel> {

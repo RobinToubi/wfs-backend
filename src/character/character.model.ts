@@ -35,7 +35,7 @@ export interface ICharacter extends IModel {
 }
 
 interface CharacterBaseDocument extends ICharacter, Document {
-  id: string;
+  _id: string;
   fullname: string;
   getGender(): string;
 }

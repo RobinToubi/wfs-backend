@@ -15,7 +15,7 @@ class AuthService {
           if (value) {
             return generateToken({
               email: user.email,
-              id: user.id,
+              id: user._id,
               role: user.role
             })
           }

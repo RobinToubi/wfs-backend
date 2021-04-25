@@ -62,7 +62,7 @@ export interface IUser extends IModel {
 
 
 interface UserBaseDocument extends IUser, Document {
-  id: string;
+  _id: string;
   fullname: string;
   getGender(): string;
 }

@@ -2,7 +2,7 @@ import { Document, model, Model, Schema } from 'mongoose';
 import { IModel } from '../common/abstract.model';
 import { hash } from 'bcrypt';
 
-enum Gender {
+export enum Gender {
   Male = "Male",
   Female = "Female",
   Other = "Other",

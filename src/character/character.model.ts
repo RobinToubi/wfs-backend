@@ -22,7 +22,8 @@ const CharacterSchema = new Schema<CharacterDocument, CharacterModel>({
     type: String,
     enum: Gender,
     default: Gender.HelicoptereDeCombat
-  }
+  },
+  actors: []
 })
 
 export interface ICharacter extends IModel {
@@ -32,6 +33,7 @@ export interface ICharacter extends IModel {
   nationality: string;
   birthYear: number;
   gender: Gender;
+  actors: [];
 }
 
 interface CharacterBaseDocument extends ICharacter, Document {

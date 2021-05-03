@@ -28,8 +28,9 @@ export interface IActor extends IModel {
     nationality: string;
     gender: Gender;
     nickname: string;
+    pictures: string;
 }
-
+ 
 interface ActorBaseDocument extends IActor, Document {
     _id: string;
     fullName: string;

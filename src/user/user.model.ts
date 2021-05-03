@@ -51,11 +51,11 @@ const UserSchema = new Schema<UserDocument, UserModel>({
 export interface IUser extends IModel {
   firstName: string;
   lastName: string;
+  username: string;
   birthDate: Date;
-  nationality: string;
-  gender: Gender;
-  password: string;
   email: string;
+  password: string;
+  gender: Gender;
   role: UserRole;
 }
 

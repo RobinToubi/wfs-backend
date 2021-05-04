@@ -10,4 +10,5 @@ router.use('/characters', characterRouter);
 router.use('/movies', movieRouter);
 router.use('/actors', actorRouter);
 router.use('/auth', authRouter);
+router.use('/users', authRouter);
 router.use(routeNotFoundMiddleware);

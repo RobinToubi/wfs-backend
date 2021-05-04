@@ -4,11 +4,13 @@ import { UserModel } from '../user/user.model';
 import { userRepository } from '../user/user.repository';
 import { IAuthCredentials, IAuthMeDto } from './auth.model';
 import { compare } from 'bcrypt';
+import {AbstractService} from '../common/abstract.service';
 
-class AuthService {
+class AuthService extends AbstractService<UserModel> {
+  protected  repository = userRepository;
 
   login(credentials: IAuthCredentials): Promise<string> {
-    return userRepository.findByEmail(credentials.email)
+    return this.repository.findByEmail(credentials.email)
       .then((user) => {
         return compare(credentials.password, user.password)
         .then((value) => {
@@ -25,11 +27,11 @@ class AuthService {
   }
 
   register(user: UserModel): Promise<UserModel> {
-    return userRepository.create(user);
+    return this.repository.create(user);
   }
 
   getUser(userId: string): Promise<IAuthMeDto> {
-    return userRepository.get(userId);
+    return this.repository.get(userId);
   }
 }
 

@@ -42,43 +42,14 @@ L'installation du projet se fait en quelques étapes :
 npm i
 ```
 
-2. Modification des ids de connexion à la base de données dans le
-### Step by step
-1. NPM module (project descriptor)
+2. Modification des ids de connexion à la base de données dans le fichier de variables d'environnement
+3. Lancer l'application
 ```
-npm init -y
-```
-
-2. Nodemon (application auto reload)
-```
-npm install --save-dev nodemon
+npm run start
 ```
 
-3. Typescript (JavaScript superset language)
-```
-npm install --save-dev typescript ts-node @types/node
-```
-
-4. Moment (date util library)
-```
-npm install moment
-```
-
-5. Express (server framework)
-```
-npm install express
-npm install --save-dev @types/express
-```
-
-### Developer
-```
-npm install
-```
-
-# Connection
-
-Admin accesses
-
+### Utilitaires
+Compte permettant de se connecter avec des droits d'administration :
 username: admin
 mail : admin@admin.com
 pwd : admin

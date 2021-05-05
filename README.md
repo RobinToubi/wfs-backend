@@ -49,7 +49,9 @@ npm run start
 ```
 
 ### Utilitaires
-Compte permettant de se connecter avec des droits d'administration :
-username: admin
-mail : admin@admin.com
-pwd : admin
+Liste des différents comptes disponibles :
+| Username    |   Email | Password | Rôle |
+| ----------- | ----------- | ----------- | ----------- |
+| admin      | admin@admin.com | admin | ADMIN |
+| rgi   | rgimenez@test.com | rgi | MEMBER |
+
